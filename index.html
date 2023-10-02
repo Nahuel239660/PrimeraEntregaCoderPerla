@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cotizador de seguros</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="script.js"></script> <!-- Agregamos esta línea -->
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <header> 
@@ -25,19 +24,19 @@
             <div class="parcelascont">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
-                            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
-                            aria-selected="true" data-complete="false">Vehiculo</button>
+                        <button class="nav-link active" id="home-tab" data-toggle="tab"
+                            data-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                            aria-selected="true">Vehiculo</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
-                            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
-                            aria-selected="true">Datos</button>
+                        <button class="nav-link" id="profile-tab" data-toggle="tab"
+                            data-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                            aria-selected="false">Datos</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
-                            data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
-                            aria-selected="true">Costo</button>
+                        <button class="nav-link" id="contact-tab" data-toggle="tab"
+                            data-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
+                            aria-selected="false">Costo</button>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -93,9 +92,13 @@
         </div>
     </main>
     <footer>
-        <!-- Contenido del pie de página -->
+        <div class="footer">
+            <p>© 2021 - Todos los derechos reservados</p>
+        </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
