@@ -1,108 +1,111 @@
-/* styles.css */
-
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-}
-
-.header {
+  }
+  
+  .header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
     text-align: center;
-}
-
-.header h1 {
+  }
+  
+  .header h1 {
     margin: 0;
-}
-
-nav ul {
+  }
+  
+  nav ul {
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
+  }
+  
+  nav ul li {
     display: inline;
     margin-right: 20px;
     font-weight: bold;
-}
-
-nav ul li:last-child {
+  }
+  
+  nav ul li:last-child {
     margin-right: 0;
-}
-
-.main {
+  }
+  
+  .main {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
-}
-
-.nav-tabs {
+  }
+  
+  /* Estilos para la navegación de pestañas */
+  .nav {
     background-color: #007bff;
     color: #fff;
-}
-
-.nav-tabs .nav-item {
-    margin-right: 10px;
-}
-
-.nav-link.active {
-    background-color: #0056b3;
-}
-
-.colum {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.colum select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.buton {
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .nav-item {
+    flex: 1;
     text-align: center;
-}
-
-.boton {
-    background-color: #007bff;
+  }
+  
+  .nav-link {
     color: #fff;
-    padding: 10px 20px;
-    border: none;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
     cursor: pointer;
-}
-
-.boton:hover {
+  }
+  
+  .nav-link.active {
     background-color: #0056b3;
-}
-
-#miFormulario {
-    margin: 0;
-    padding: 0;
-}
-
-.colum2 {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.colum2 input[type="text"],
-.colum2 input[type="number"],
-.colum2 input[type="email"] {
+  }
+  
+  /* Estilos para los selectores y botones */
+  .select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.result {
+  }
+  
+  .button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para el formulario */
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form input[type="text"],
+  .form input[type="number"],
+  .form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para el resultado y el botón de contratar */
+  .result {
     margin: 20px 0;
     padding: 20px;
     background-color: #eee;
@@ -110,11 +113,18 @@ nav ul li:last-child {
     font-weight: bold;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-#botonContratar {
+  }
+  
+  #botonContratar {
     background-color: #28a745;
     color: #fff;
     padding: 10px 20px;
     border: none;
-    cursor
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #botonContratar:hover {
+    background-color: #218838;
+  }
+  
