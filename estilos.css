@@ -2,31 +2,74 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
-header {
+.header {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
 }
 
-main {
+.header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+.main {
     max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
+    margin: 0 auto;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
 }
 
-h1 {
-    color: #333;
+.nav-tabs {
+    background-color: #007bff;
+    color: #fff;
 }
 
-button {
+.nav-tabs .nav-item {
+    margin-right: 10px;
+}
+
+.nav-link.active {
+    background-color: #0056b3;
+}
+
+.colum {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.colum select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.buton {
+    text-align: center;
+}
+
+.boton {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -34,6 +77,44 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.boton:hover {
     background-color: #0056b3;
 }
+
+#miFormulario {
+    margin: 0;
+    padding: 0;
+}
+
+.colum2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.colum2 input[type="text"],
+.colum2 input[type="number"],
+.colum2 input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.result {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #eee;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#botonContratar {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor

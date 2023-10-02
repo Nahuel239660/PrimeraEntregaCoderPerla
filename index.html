@@ -4,17 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotizar seguro</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cotizador de seguros</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="script.js"></script> <!-- Agregamos esta línea -->
 </head>
-
 <body>
-    <header>
-        <!-- Contenido del encabezado -->
+    <header> 
+        <div class="header">
+            <h1>Cotizador de seguros</h1>
+            <nav>
+                <ul>
+                    <li>HOME</li>
+                    <li>CONTACTO</li>
+                </ul>
+            </nav>
+        </div> 
     </header>
     <main>
-        <h1>Programa para calcular cuota de seguro</h1>
-        <button onclick="ingresarMonto()">Calcular</button>
+        <div class="contenedor">
+            <div class="parcelascont">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                            aria-selected="true" data-complete="false">Vehiculo</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                            aria-selected="true">Datos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                            data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
+                            aria-selected="true">Costo</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                        tabindex="0">
+                        <!-- Contenido de la pestaña "Vehiculo" -->
+                        <div class="colum">
+                            <select id="marca" required>
+                                <option value="sedan">Marca...</option>
+                            </select>
+                            <select id="modelo" disabled>
+                                <option value="sedan">Modelo...</option>
+                            </select>
+                            <select id="anio" disabled>
+                                <option value="sedan">Año...</option>
+                            </select>
+                        </div>
+                        <div class="buton">
+                            <button class="boton" id="botonSiguiente">siguiente</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                        tabindex="0">
+                        <!-- Contenido de la pestaña "Datos" -->
+                        <form id="miFormulario">
+                            <div class="colum2">
+                                <div>
+                                <input type="text" name="name" id="nombre" placeholder="Nombre..." required>
+                                <input type="text" name="lastname" id="apellido" placeholder="Apellido..." required>
+                                </div>
+                                <div>
+                                <input type="number" name="document" id="dni" placeholder="DNI..." required>
+                                <input type="email" name="mail" id="correo" placeholder="Correo..." required >
+                                </div>
+                            </div>  
+                            <div class="buton">
+                                <button class="boton" id="botonSiguiente2">Siguiente</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab">
+                        <!-- Contenido de la pestaña "Costo" -->
+                        <div id="resultado" class="result"></div>
+                        <div class="buton">
+                            <button class="boton" id="botonContratar">Contratar</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab"
+                        tabindex="0">...
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <!-- Contenido del pie de página -->
