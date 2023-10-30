@@ -1,0 +1,13 @@
+{
+  "name": "cotizador-de-seguros",
+  "version": "1.0.0",
+  "description": "cotizador de seguros perla",
+  "main": "main.js",
+  
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.0.1"
+  }
+}

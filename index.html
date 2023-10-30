@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="main.js" defer></script>
+    <script src="modelos.js" defer></script>
+    <script src="datos.js" defer></script>
+    <script src="autito.js" async></script>
     <title>Cotizador de seguros</title>
-    <link rel="stylesheet" href="./estilos.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
     <header> 
@@ -13,6 +19,7 @@
             <h1>Cotizador de seguros</h1>
             <nav>
                 <ul>
+                    <li id="fecha"></li>
                     <li>HOME</li>
                     <li>CONTACTO</li>
                 </ul>
@@ -20,23 +27,27 @@
         </div> 
     </header>
     <main>
+        <div class="img">
+            <img src="./assets/img/companias.png" alt="" class="img2">
+        </div>
+        <div class="car" id="car"><img src="./assets/img/car.png" alt="" class="imagen"></div>
         <div class="contenedor">
             <div class="parcelascont">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-toggle="tab"
-                            data-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
-                            aria-selected="true">Vehiculo</button>
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                            aria-selected="true" data-complete="false">Vehiculo</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab" data-toggle="tab"
-                            data-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
-                            aria-selected="false">Datos</button>
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                            aria-selected="true">Datos</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-toggle="tab"
-                            data-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
-                            aria-selected="false">Costo</button>
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                            data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
+                            aria-selected="true">Costo</button>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -45,15 +56,15 @@
                         <!-- Contenido de la pestaña "Vehiculo" -->
                         <div class="colum">
                             <select id="marca" required>
-                                <option value="sedan">Marca...</option>
+                                <option value="" disabled selected hidden>Marca...</option>
                             </select>
                             <select id="modelo" disabled>
-                                <option value="sedan">Modelo...</option>
+                                <option value="" disabled selected hidden>Modelo...</option>
                             </select>
                             <select id="anio" disabled>
-                                <option value="sedan">Año...</option>
+                                <option value="" disabled selected hidden>Año...</option>
                             </select>
-                        </div>
+                        </div>                        
                         <div class="buton">
                             <button class="boton" id="botonSiguiente">siguiente</button>
                         </div>
@@ -69,9 +80,9 @@
                                 </div>
                                 <div>
                                 <input type="number" name="document" id="dni" placeholder="DNI..." required>
-                                <input type="email" name="mail" id="correo" placeholder="Correo..." required >
+                                <input type="email" name="mail" id="correo" placeholder="Correo..." required>
                                 </div>
-                            </div>  
+                            </div>
                             <div class="buton">
                                 <button class="boton" id="botonSiguiente2">Siguiente</button>
                             </div>
@@ -92,13 +103,13 @@
         </div>
     </main>
     <footer>
-        <div class="footer">
-            <p>© 2021 - Todos los derechos reservados</p>
-        </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="mail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
 </body>
 </html>
